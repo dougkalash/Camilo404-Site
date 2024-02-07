@@ -1,0 +1,55 @@
+<app-custom-cursor></app-custom-cursor>
+
+<div class="video-container">
+  <div id="video_cover"></div>
+  <video id='myVideo' autoplay muted loop #bgVideo>
+    <source src="../../../assets/videos/bgVideo.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-overlay"></div>
+</div>
+
+<div class="container-info">
+  <div class="grid content-center justify-items-center text-white">
+    <app-clock></app-clock>
+
+    <p class="text-white font-semibold my-4 text-[18px] md:text-[25px]">
+      7
+    </p>
+
+    <section class="glowing-icons">
+      <ul class="flex flex-wrap gap-2">
+        <li>
+          <a href="https://github.com/dougkalash" target="_blank" class="hovered">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=hIb56vTdREs" target="_blank" class="hovered">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" class="hovered">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://steamcommunity.com/id/DG404/" target="_blank" class="hovered">
+            <i class="fa-brands fa-steam"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div id="sound-slider__container" class="mt-5">
+      <i class='iconVolume text-white hovered bx bxs-volume-mute bx-tada bx-flip-vertical' #iconVolume (click)="toggleMute()"></i>
+      <input type="range" #volumeInput value="0" min="0" max="100" id="sound-slider" (input)="changeVolume($event)" class="hovered">
+      <p id="volume">{{volume}}</p>
+    </div>
+  </div>
+
+  <app-card-profile></app-card-profile>
+</div>
+
+
