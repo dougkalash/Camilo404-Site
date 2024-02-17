@@ -2,3 +2,4 @@ node_modules
 .angular/cache/16.1.1/babel-webpack/e753407f9e3484b91c9af365dac45f2d050f4999cbe5fcc6b96bcb9078a39594.json
 *.json
 *.pack
+*.old
